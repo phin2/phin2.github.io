@@ -24,7 +24,7 @@
 
   /* sprite animation settings */
   /* animation duration */
-  --sprite-as: 10s;
+  --sprite-as: .8s;
   /* animation direction */
   --sprite-ad: normal;
   /* animation fill mode */
