@@ -75,3 +75,12 @@ body {
     clip-path: path("M 0 300 L 0 160 C 450 220 500 140 650 220 C 750 260 850 110 1200 350");
   }
 }
+
+.main-window {
+  width: 300px;
+  height: 150px;
+  background-color: #f0f0f0;
+  border: 2px solid #333;
+  border-radius: 20px; /* This rounds all four corners equally */
+  padding: 20px;
+}
