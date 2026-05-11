@@ -83,7 +83,7 @@ body {
   border: 2px solid #333;
   border-radius: 20px; /* This rounds all four corners equally */
   padding: 20px;
-  z-index: 1000;
+  z-index: 200;
   position: absolute;
 }
 
