@@ -84,4 +84,5 @@ body {
   border-radius: 20px; /* This rounds all four corners equally */
   padding: 20px;
   z-index: 1000;
+  position: absolute;
 }
