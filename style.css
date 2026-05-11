@@ -117,3 +117,11 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.fa { 
+  transition:.5s; /* this is grow duration */
+}
+
+.fa:hover {
+transform:scale(1.5); /* this is grow amount */
+}
