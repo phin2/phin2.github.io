@@ -114,14 +114,15 @@ body {
     height: 50px;
     background-color: #f0f0f0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.fa { 
+.icon-bar__item { 
   transition:.5s; /* this is grow duration */
 }
 
-.fa:hover {
-transform:scale(1.5); /* this is grow amount */
+.icon-bar__item:hover {
+transform:scale(1.2); /* this is grow amount */
 }
