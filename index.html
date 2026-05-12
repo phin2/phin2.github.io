@@ -13,29 +13,20 @@
     <script>
         System.import('./portfolio.js');
     </script>
-
-    <script>
-      // Open a centered popup window; fallback to navigation if blocked
-      function popup(url, name) {
-        const w = 100, h = 100;
-        const left = window.screenX + Math.max(0, (window.outerWidth - w) / 2);
-        const top = window.screenY + Math.max(0, (window.outerHeight - h) / 2);
-        const features = `width=${w},height=${h},left=${left},top=${top},resizable,scrollbars`;
-        const win = window.open(url, name, features);
-        if (!win || win.closed === undefined) {
-          // Popup blocked — open in same tab as fallback
-          window.location.href = url;
-        } else {
-          win.focus();
-        }
-      }
-    </script>
   </head>
 
   <div class="main-window">
     <div class = "bar"></div>
     <div style=" justify-content: center; align-items: center;  display: flex;">
       <h1 style="font-family: 'Comic Neue'; font-size: 50pt;">Phi Nguyen</h1>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+      <div class="modal-box">
+        <button id="closeBtn" class="modal-close">×</button>
+        <h3>Hello!</h3>
+        <p>This is a modal popup.</p>
+      </div>
     </div>
 
     <div class="icon-bar">

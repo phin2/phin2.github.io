@@ -1,12 +1,28 @@
-function popup(link,windowname) {
-    if (! window.focus)
-        return true;
-    var href;
-    if (typeof(link) == 'string')
-        href = link;
-    else 
-    href = link.href;
+const modal = document.getElementById("modal");
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.getElementById("closeBtn");
 
-    window.open(href, windowname,'width=400,height=200,scrollbars=yes');
-    return false
+function openModal() {
+  modal.classList.add("show");
 }
+
+function closeModal() {
+  modal.classList.remove("show");
+}
+
+openBtn.addEventListener("click", openModal);
+closeBtn.addEventListener("click", closeModal);
+
+/* Close when clicking outside the modal box */
+modal.addEventListener("click", function (event) {
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+
+/* Close when pressing Escape */
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeModal();
+  }
+});
