@@ -1,4 +1,4 @@
-document.readyState === 'complete'
+document.readyState === 'complete' ? init() : window.addEventListener('load', init);
 
 
 function init() {
