@@ -41,7 +41,7 @@ body {
   }
 }
 .beach__sand {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -66,7 +66,7 @@ body {
   background: linear-gradient(200deg, #F5FCCD 0%, #ff7d66 300%);
   animation: seafoam2;
   animation-duration: 10s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite;;
 }
 
 @keyframes seafoam2 {
@@ -74,7 +74,7 @@ body {
     clip-path: path("M 0 1000 L 0 100 C 450 125 500 50 650 150 C 750 250 850 150 1200 350");
   }
   50% {
-    clip-path: path("M 0 500 L 0 160 C 450 220 500 140 650 220 C 750 260 850 110 1200 350");
+    clip-path: path("M 0 1000 L 0 160 C 450 220 500 140 650 220 C 750 260 850 110 1200 350");
   }
 }
 
