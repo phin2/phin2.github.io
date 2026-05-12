@@ -13,6 +13,23 @@
     <script>
         System.import('./portfolio.js');
     </script>
+
+    <script>
+      // Open a centered popup window; fallback to navigation if blocked
+      function popup(url, name) {
+        const w = 600, h = 600;
+        const left = window.screenX + Math.max(0, (window.outerWidth - w) / 2);
+        const top = window.screenY + Math.max(0, (window.outerHeight - h) / 2);
+        const features = `width=${w},height=${h},left=${left},top=${top},resizable,scrollbars`;
+        const win = window.open(url, name, features);
+        if (!win || win.closed === undefined) {
+          // Popup blocked — open in same tab as fallback
+          window.location.href = url;
+        } else {
+          win.focus();
+        }
+      }
+    </script>
   </head>
 
   <div class="main-window">
@@ -22,7 +39,7 @@
     </div>
 
     <div class="icon-bar">
-      <div class = "icon-bar__item" id = "about_btn" onclick="popup('about.html','about')">
+      <div class = "icon-bar__item" id = "about_btn" onclick="popup('./about.html','about')">
         <i class="fa fa-solid fa-circle-info fa-2xl"></i>
         <p style = "font-family: 'Comic Neue';">About</p>
       </div>
