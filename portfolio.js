@@ -1,10 +1,12 @@
-document.readyState === 'complete' ? init() : window.addEventListener('load', init);
+function popup(link,windowname) {
+    if (! window.focus)
+        return true;
+    var href;
+    if (typeof(link) == 'string')
+        href = link;
+    else 
+    href = link.href;
 
-
-function init() {
-    let about_popup = new Popup();
-
-    document.querySelector('#about_btn').addEventListener('click', () => {
-        about_popup.open();
-    });
+    window.open(href, windowname,'width=400,height=200,scrollbars=yes');
+    return false
 }
