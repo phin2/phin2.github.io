@@ -68,6 +68,7 @@ body {
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
+
 @keyframes seafoam2 {
   0%, 100% {
     clip-path: path("M 0 1000 L 0 100 C 450 125 500 50 650 150 C 750 250 850 150 1200 350");
