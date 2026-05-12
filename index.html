@@ -20,12 +20,16 @@
       <!-- Draggable DIV -->
   <div id="mydiv">
     <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-    <div id="mydivheader">About</div>
-    <div style="margin-top:20px; height: 40%; display: flex; justify-content: left; align-items: left; top: 100px">
+    <div id="mydivheader">
+      About
+
+      <i class="fa-solid fa-xmark" id ="close_abt" onclick="hideDiv()"></i>
+    </div>
+    <div style="margin-top:3%;margin-right: 5%; height: 40%; display: flex; justify-content: left; align-items: left; top: 100px">
       <div style = "width: 40%; height: 100%;">
-        <img src = "20250905_173922.jpg" style = "width: 100%; height: 100%; object-fit: cover; border-radius: 100%; justify-content: left; object-fit: cover;"/>
+        <img src = "20250830_100147.jpg" style = "aspect-ratio:1/1; height: 100%; object-fit: cover; border-radius: 100%; justify-content: left; object-fit: cover;"/>
       </div>
-      <div style="width: 60%; height: 100%;">
+      <div style="width: 60%; height: 100%; align-content: center;">
       <h1>
         Phi Nguyen
       </h1>
@@ -36,7 +40,8 @@
     <hr>
     <div style="overflow-y: auto; max-height: 50%;">
       <p>
-        Hello! My name is Phi Nguyen and I'm a data analyst and a biostatistics student.
+        Hello! My name is Phi Nguyen and I'm a data analyst and a biostatistics student. 
+        My primary focus has been on using data to drive decision making to improve patient and clinical outcomes.
       </p>   
       <h2>
         Work Experience:
@@ -61,46 +66,42 @@
 
   <div id="links_div">
     <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-    <div id="mydivheader">Links</div>
-    <div style="background-color: aquamarine; width: 100%; height: 20%;"></div>
-    <hr>
-    <div style="overflow-y: auto; max-height: 80%;">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lobortis scelerisque eros, placerat semper dui elementum eu. Suspendisse imperdiet hendrerit urna, et facilisis ante mattis in. Donec vitae leo velit. Nulla congue imperdiet nunc sit amet suscipit. Nam mattis posuere magna eget sagittis. Morbi sed neque sem. Ut posuere odio non nulla pulvinar, non dignissim elit ornare. Sed a ipsum sit amet urna dictum dignissim vitae vel nisl. Mauris tincidunt, nunc nec luctus posuere, ipsum lacus imperdiet neque, ultrices efficitur dui arcu eu dui. Phasellus nec maximus tortor.
+    <div id="mydivheader">
+      Links
+      <i class="fa-solid fa-xmark" id ="close_links" onclick="hideDiv()"></i>
 
-Ut consequat accumsan lacus a feugiat. Donec et leo eget orci efficitur pellentesque nec id sapien. Ut in pretium tellus. Pellentesque mattis dignissim nibh, aliquam iaculis nisi interdum id. Praesent ac dignissim est, at tincidunt nunc. Cras vulputate, ligula a congue aliquet, nulla ex congue leo, at fermentum lectus enim at elit. Phasellus vitae blandit nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. Pellentesque id arcu porttitor, dignissim urna vitae, rutrum tellus. Proin lacus elit, blandit a consectetur vel, placerat sit amet enim. Cras tortor dolor, lobortis sed turpis eu, lacinia interdum magna. Aliquam erat volutpat. Nunc aliquet lacus sed ante egestas, at vehicula nisl interdum. Curabitur eget justo enim.
-
-Pellentesque nec lectus commodo, bibendum est a, convallis lacus. Donec purus lectus, ultrices nec sem vel, vestibulum dictum nibh. Pellentesque placerat tellus vitae nisl ullamcorper, ut elementum urna tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dictum mollis enim, et vestibulum felis tempus eget. Suspendisse libero dui, pulvinar quis purus sed, porta blandit nunc. Duis ultrices augue felis, sed tempor tellus fringilla a. Etiam sit amet euismod enim. Mauris mattis pharetra arcu, sit amet molestie turpis faucibus non.
-
-Aenean ex lorem, suscipit quis quam mollis, tristique rutrum justo. Vivamus efficitur nisi ultrices urna tristique aliquam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras et sapien ante. Nunc dignissim ipsum id dolor condimentum sagittis. Nullam a erat commodo, sollicitudin lacus non, dapibus ligula. Curabitur egestas non leo id aliquet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum a felis ut ipsum aliquet efficitur ut vitae dolor. In aliquet orci ac maximus auctor. Vestibulum lobortis eros non fringilla sodales. Nunc varius magna ut aliquam vulputate. Morbi eu lobortis ipsum. Cras tempus metus at metus aliquam mattis. Cras vitae nisi efficitur, consectetur felis sit amet, pretium erat. Nulla hendrerit sem finibus odio venenatis porttitor.
-
-Cras rhoncus metus eget nibh porttitor pulvinar vel porttitor tellus. Cras eu vestibulum mauris. Fusce laoreet velit ac finibus tincidunt. Nulla sit amet erat bibendum, vestibulum ex nec, venenatis diam. In egestas tortor a hendrerit malesuada. Quisque lacinia libero ut nulla ultricies convallis. Fusce eget malesuada odio. Pellentesque est enim, hendrerit in mollis ut, lobortis id mi. Morbi orci tellus, laoreet ac sapien quis, vulputate faucibus sapien. Ut malesuada varius sem, sed pulvinar felis ullamcorper sed. Integer non nunc non libero consectetur facilisis non a dolor. Phasellus vel lorem ut risus bibendum consequat. Nulla facilisi. Morbi aliquet erat urna, a viverra est varius eget. Vestibulum vel sagittis nibh.
     </div>
-
-    
-
-
+    <div style="align-content: center; justify-content: center;width: 100%; height: 100%; display: flex; flex-direction: row; align-items: center; gap: 20px;">
+      <i class="fa-brands fa-linkedin"></i>
+      <i class="fa-brands fa-github"></i>
+      <i class="fa-solid fa-file"></i>
+    </div>
   </div>
   
     <div id="projects_div">
     <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-    <div id="mydivheader">Projects</div>
-    <div style="background-color: aquamarine; width: 100%; height: 20%;"></div>
-    <hr>
-    <div style="overflow-y: auto; max-height: 80%;">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lobortis scelerisque eros, placerat semper dui elementum eu. Suspendisse imperdiet hendrerit urna, et facilisis ante mattis in. Donec vitae leo velit. Nulla congue imperdiet nunc sit amet suscipit. Nam mattis posuere magna eget sagittis. Morbi sed neque sem. Ut posuere odio non nulla pulvinar, non dignissim elit ornare. Sed a ipsum sit amet urna dictum dignissim vitae vel nisl. Mauris tincidunt, nunc nec luctus posuere, ipsum lacus imperdiet neque, ultrices efficitur dui arcu eu dui. Phasellus nec maximus tortor.
+    <div id="mydivheader">Projects
+      <i class="fa-solid fa-xmark" id ="close_projects" onclick="hideDiv()"></i>
 
-Ut consequat accumsan lacus a feugiat. Donec et leo eget orci efficitur pellentesque nec id sapien. Ut in pretium tellus. Pellentesque mattis dignissim nibh, aliquam iaculis nisi interdum id. Praesent ac dignissim est, at tincidunt nunc. Cras vulputate, ligula a congue aliquet, nulla ex congue leo, at fermentum lectus enim at elit. Phasellus vitae blandit nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. Pellentesque id arcu porttitor, dignissim urna vitae, rutrum tellus. Proin lacus elit, blandit a consectetur vel, placerat sit amet enim. Cras tortor dolor, lobortis sed turpis eu, lacinia interdum magna. Aliquam erat volutpat. Nunc aliquet lacus sed ante egestas, at vehicula nisl interdum. Curabitur eget justo enim.
-
-Pellentesque nec lectus commodo, bibendum est a, convallis lacus. Donec purus lectus, ultrices nec sem vel, vestibulum dictum nibh. Pellentesque placerat tellus vitae nisl ullamcorper, ut elementum urna tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dictum mollis enim, et vestibulum felis tempus eget. Suspendisse libero dui, pulvinar quis purus sed, porta blandit nunc. Duis ultrices augue felis, sed tempor tellus fringilla a. Etiam sit amet euismod enim. Mauris mattis pharetra arcu, sit amet molestie turpis faucibus non.
-
-Aenean ex lorem, suscipit quis quam mollis, tristique rutrum justo. Vivamus efficitur nisi ultrices urna tristique aliquam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras et sapien ante. Nunc dignissim ipsum id dolor condimentum sagittis. Nullam a erat commodo, sollicitudin lacus non, dapibus ligula. Curabitur egestas non leo id aliquet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum a felis ut ipsum aliquet efficitur ut vitae dolor. In aliquet orci ac maximus auctor. Vestibulum lobortis eros non fringilla sodales. Nunc varius magna ut aliquam vulputate. Morbi eu lobortis ipsum. Cras tempus metus at metus aliquam mattis. Cras vitae nisi efficitur, consectetur felis sit amet, pretium erat. Nulla hendrerit sem finibus odio venenatis porttitor.
-
-Cras rhoncus metus eget nibh porttitor pulvinar vel porttitor tellus. Cras eu vestibulum mauris. Fusce laoreet velit ac finibus tincidunt. Nulla sit amet erat bibendum, vestibulum ex nec, venenatis diam. In egestas tortor a hendrerit malesuada. Quisque lacinia libero ut nulla ultricies convallis. Fusce eget malesuada odio. Pellentesque est enim, hendrerit in mollis ut, lobortis id mi. Morbi orci tellus, laoreet ac sapien quis, vulputate faucibus sapien. Ut malesuada varius sem, sed pulvinar felis ullamcorper sed. Integer non nunc non libero consectetur facilisis non a dolor. Phasellus vel lorem ut risus bibendum consequat. Nulla facilisi. Morbi aliquet erat urna, a viverra est varius eget. Vestibulum vel sagittis nibh.
     </div>
 
-    
-
-
+    <div style="overflow-y: auto; max-height: 80%;margin-top: 1%;display: flex; flex-direction: column; gap: 10px;">
+      <div class ="project-item" style="display: flex;flex-direction: row; margin-right: 10px; justify-content: space-between;">
+        <img src = "000069.png" style="width:60%;"/>
+        <p>A visualization of paintings in the Museum of Modern Art (MoMA) depicting number of paintings by aritist ethnicity. 
+          Artists ethnicity was extracted from the artist biography, as we can see most paintings in the MoMA are painted by American artists 
+          with French artists being the second largest group. This visualization was made as a part of Lab 2 of BMI 525 </p>
+      </div>
+      <hr style="height:5px"/>
+            <div class ="project-item" style="display: flex;flex-direction: row; margin-right: 10px; justify-content: space-between;">
+        <img src = "download.png" style="width:60%;"/>
+        <p>Relationship between ingredients and how often they are used in recipes; ingredients data was extracted from food blogs across the internet and cleaned to remove amount and quantity
+          From the recipes data ingredients were plotted out with each connection between a pair of ingredients representing how many times those two ingredients were used together in a recipe. 
+          This visualization was made as a part of the Graph Exploration Assignment for BMI 525
+        </p>
+      </div>
+   
+    </div>
   </div>
   
 
@@ -194,6 +195,28 @@ function dragElement(elmnt) {
     })
     projectsBtn?.addEventListener('click', function (e) {
       if (projects_div) projects_div.style.display = 'block';
+    })
+  }
+)();
+
+  (function hideDiv() {
+    const btn = document.getElementById('close_abt');
+    const mydiv = document.getElementById('mydiv');
+
+    const linkBtn = document.getElementById('close_links');
+    const links_div = document.getElementById('links_div');
+
+    const projectsBtn = document.getElementById('close_projects');
+    const projects_div = document.getElementById('projects_div');
+
+    btn?.addEventListener('click', function (e) {
+      if (mydiv) mydiv.style.display = 'none';
+    })
+    linkBtn?.addEventListener('click', function (e) {
+      if (links_div) links_div.style.display = 'none';
+    })
+    projectsBtn?.addEventListener('click', function (e) {
+      if (projects_div) projects_div.style.display = 'none';
     })
   })();
 

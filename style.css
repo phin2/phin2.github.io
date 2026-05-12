@@ -170,6 +170,9 @@ transform:scale(1.2); /* this is grow amount */
     top:0;
     position:absolute;
     border-radius: 15px 15px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
 }
 
