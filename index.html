@@ -10,74 +10,122 @@
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script>
-      const modal = document.getElementById("modal");
-      const openBtn = document.getElementById("about_btn");
-      const closeBtn = document.getElementById("closeBtn");
 
-      function openModal() {
-        modal.classList.add("show");
-      }
-
-      function closeModal() {
-        modal.classList.remove("show");
-      }
-
-      openBtn.addEventListener("click", openModal);
-      closeBtn.addEventListener("click", closeModal);
-
-      /* Close when clicking outside the modal box */
-      modal.addEventListener("click", function (event) {
-        if (event.target === modal) {
-          closeModal();
-        }
-      });
-
-      /* Close when pressing Escape */
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-          closeModal();
-        }
-      });
-    </script>
   </head>
 
-  <div class="main-window">
-    <div class = "bar"></div>
-    <div style=" justify-content: center; align-items: center;  display: flex;">
-      <h1 style="font-family: 'Comic Neue'; font-size: 50pt;">Phi Nguyen</h1>
-    </div>
-
-    <div id="modal" class="modal-overlay">
-      <div class="modal-box">
-        <button id="closeBtn" class="modal-close">×</button>
-        <h3>Hello!</h3>
-        <p>This is a modal popup.</p>
-      </div>
-    </div>
-
-    <div class="icon-bar">
-      <div class = "icon-bar__item" id = "about_btn" onclick="popup('./about.html','about')">
-        <i class="fa fa-solid fa-circle-info fa-2xl"></i>
-        <p style = "font-family: 'Comic Neue';">About</p>
-      </div>
-      <div class = "icon-bar__item" id = "links_btn">
-        <i class="fa fa-solid fa-link fa-2xl"></i>
-        <p style = "font-family: 'Comic Neue';">Links</p>
-      </div>
-      <div class = "icon-bar__item" id ="projects_btn">
-        <i class="fa fa-solid fa-chart-line fa-2xl"></i>
-        <p style = "font-family: 'Comic Neue';">Projects</p>
-      </div>
-    </div>
-  </div>
+  
 
   <body>
+
+      <!-- Draggable DIV -->
+  <div id="mydiv">
+    <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+    <div id="mydivheader">About</div>
+
+  </div>
+
+    <div class="main-window">
+      <div class = "bar"></div>
+      <div style=" justify-content: center; align-items: center;  display: flex;">
+        <h1 style="font-family: 'Comic Neue'; font-size: 50pt;">Phi Nguyen</h1>
+      </div>
+
+
+      <div class="icon-bar">
+        <div class = "icon-bar__item" onclick="showDiv()" id = "about_btn" data-toggle="modal" data-target="#myModal">
+          <i class="fa fa-solid fa-circle-info fa-2xl"></i>
+          <p style = "font-family: 'Comic Neue';">About</p>
+        </div>
+
+
+        <div class = "icon-bar__item" id = "links_btn">
+          <i class="fa fa-solid fa-link fa-2xl"></i>
+          <p style = "font-family: 'Comic Neue';">Links</p>
+        </div>
+        <div class = "icon-bar__item" id ="projects_btn">
+          <i class="fa fa-solid fa-chart-line fa-2xl"></i>
+          <p style = "font-family: 'Comic Neue';">Projects</p>
+        </div>
+      </div>
+    </div>
+
+<script>
+  // Make the DIV element draggable:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+
+  }
+  (function () {
+    const aboutBtn = document.getElementById('about_btn');
+    const mydiv = document.getElementById('mydiv');
+    
+
+    aboutBtn?.addEventListener('click', function (e) {
+      // prevent any default handler if needed
+      // e.preventDefault();
+      if (mydiv) mydiv.style.display = 'block';
+    });
+
+    // optionally restore mydiv when modal closes (uncomment if you add a close action)
+    /*
+    const aboutClose = document.getElementById('about_close');
+    aboutClose?.addEventListener('click', function () {
+      if (mydiv) mydiv.style.display = '';
+    });
+    */
+  })();
+
+
+  
+</script>
     <div class="beach">
       <div class="beach__waves"/>
       <div class="beach__sand beach__sand--background"/>
       <div class="beach__sand beach__sand--foreground"></div>
     <div>
+
+  </div>
+      
   </body>
 
+  
 </html>
