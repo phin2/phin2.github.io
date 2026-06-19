@@ -156,8 +156,8 @@ transform:scale(1.2); /* this is grow amount */
   padding: 20px;
   z-index: 10000;
   position: absolute;
-  top: 25%;
-  left: 30%;
+  top: 27%;
+  left: 27%;
   justify-content: center;
   align-items: center;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
@@ -187,8 +187,8 @@ transform:scale(1.2); /* this is grow amount */
   padding: 20px;
   z-index: 10000;
   position: absolute;
-  top: 25%;
-  left: 30%;
+  top: 20%;
+  left: 40%;
   justify-content: center;
   align-items: center;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
@@ -205,11 +205,31 @@ transform:scale(1.2); /* this is grow amount */
   padding: 20px;
   z-index: 10000;
   position: absolute;
-  top: 25%;
-  left: 30%;
+  top: 30%;
+  left: 24%;
   justify-content: center;
   align-items: center;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
   display: none;
 
+}
+
+.project-item{
+  align-items: center;
+  display: flex;
+  flex-direction: row; 
+  margin-left: 20px;
+  margin-right: 10px; 
+  justify-content: center;
+  border-color: black;
+  border-style: solid;
+  border-radius: 0 20px 20px 0;
+  width: 90%;
+  max-height: 10%;
+  transition: transform 0.3s ease;
+  font-size: small;
+}
+
+.project-item:hover {
+  transform: scale(1.05); 
 }
